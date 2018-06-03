@@ -28,6 +28,7 @@ module.exports = function (grunt) {
       litera:{},
       lumen:{},
       lux:{},
+      minimax:{},
       materia:{},
       minty:{},
       pulse:{},
@@ -133,7 +134,7 @@ module.exports = function (grunt) {
     files[scssDest] = scssSrc;
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.outputStyle', 'expanded');
- 
+
     grunt.task.run(['concat', 'sass:dist', 'postcss', 'clean:build',
       compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none',
       'copy:css']);

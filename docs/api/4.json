@@ -101,6 +101,17 @@
       "scssVariables": "https://bootswatch.com/4/lux/_variables.scss"
     },
     {
+      "name": "Minimax",
+      "description": "Simply minimalist",
+      "thumbnail": "https://bootswatch.com/lux/thumbnail.png",
+      "preview": "https://bootswatch.com/lux/",
+      "css": "https://bootswatch.com/4/lux/bootstrap.css",
+      "cssMin": "https://bootswatch.com/4/lux/bootstrap.min.css",
+      "cssCdn": "https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/lux/bootstrap.min.css",
+      "scss": "https://bootswatch.com/4/lux/_bootswatch.scss",
+      "scssVariables": "https://bootswatch.com/4/lux/_variables.scss"
+    },
+    {
       "name": "Materia",
       "description": "Material is the metaphor",
       "thumbnail": "https://bootswatch.com/materia/thumbnail.png",
