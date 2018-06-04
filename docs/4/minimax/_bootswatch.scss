@@ -4,7 +4,7 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
@@ -12,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 .navbar {
   font-size: $font-size-sm;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 300;
 
   &-nav {
     .nav-link {
@@ -28,10 +28,20 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 
 .bg-primary {
   background-color: $gray-900 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &.navbar-fixed-top {
+    border-width: 0 0 1px 0;
+  }
+
+  &.navbar-bottom-top {
+    border-width: 1px 0 0 0;
+  }
 }
 
 .bg-light {
   border: 1px solid rgba(0, 0, 0, 0.1);
+  color: $primary;
 
   &.navbar-fixed-top {
     border-width: 0 0 1px 0;
@@ -50,7 +60,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 
 .btn {
   font-size: $font-size-sm;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 
   &-sm {
     font-size: 10px;
@@ -96,6 +106,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 body {
   font-weight: 200;
   letter-spacing: 1px;
+  background-color: $gray-900;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,11 +127,54 @@ th {
 
 .table {
   th, td {
-    padding: 1.5rem;
+    padding: 0.75rem;
   }
 }
 
 // Forms =======================================================================
+
+.custom-control-label {
+  &::before {
+    top: 0;
+    border: 2px solid $white;
+  }
+  &::after {
+    top: 0;
+  }
+
+  .custom-control-input:checked ~ &::before {
+    border-color: $white;
+  }
+
+}
+
+.custom-checkbox .custom-control-input:checked {
+  ~ .custom-control-label::before {
+    background-color: $black;
+  }
+
+  ~ .custom-control-label::after {
+    transform: scale(1.25);
+    transition: 500ms;
+  }
+}
+
+.custom-radio .custom-control-input {
+  &:checked {
+    ~ .custom-control-label::before {
+      background-color: $black;
+    }
+    ~ .custom-control-label::after {
+      transform: scale(1);
+      transition: 500ms;
+    }
+  }
+  & {
+    ~ .custom-control-label::after {
+      transform: scale(.75);
+    }
+  }
+}
 
 // Navs ========================================================================
 
@@ -129,9 +183,42 @@ th {
   text-transform: none;
 }
 
+.nav-pills {
+    color: $black;
+
+    .nav-link.active {
+        color: $black;
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show .nav-link {
+    color: $black;
+}
+
 // Indicators ==================================================================
 
 // Progress bars ===============================================================
+
+.progress-bar {
+    background-color: $black;
+}
+
+// Pagination  =================================================================
+
+.page-link {
+    color: $black;
+}
+
+.page-link:hover {
+    color: $black;
+}
+
+.page-item.active {
+    .page-link {
+        background-color: $gray-600;
+        border-color: $gray-600;
+    }
+}
 
 // Containers ==================================================================
 
@@ -142,6 +229,15 @@ th {
   }
 }
 
+.list-group-item-action {
+    background-color: $gray-700;
+        color: $gray-100;
+}
+
+.list-group-item {
+    color: $gray-600;
+}
+
 .card {
 
   &-title,
@@ -149,3 +245,45 @@ th {
     color: inherit;
   }
 }
+
+.jumbotron {
+    background-color: $gray-700;
+}
+
+// Alerts ======================================================================
+
+.alert {
+    color: $black;
+}
+
+.alert-info {
+    background-color: #ada8e0;
+}
+.alert-info .alert-link {
+    color: $black;
+}
+
+.alert-success {
+    background-color: #a8e0b4;
+}
+.alert-success .alert-link {
+    color: $black;
+}
+
+.alert-warning {
+    background-color: #e0d8a8;
+}
+.alert-warning .alert-link {
+    color: $black;
+}
+
+.alert-danger {
+    background-color: #e0a9a8;
+}
+.alert-danger .alert-link {
+    color: $black;
+}
+
+
+
+

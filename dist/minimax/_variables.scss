@@ -5,33 +5,33 @@
 // Color system
 //
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #f7f7f9 !default;
-$gray-300: #eceeef !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #919aa1 !default;
-$gray-700: #55595c !default;
-$gray-800: #343a40 !default;
-$gray-900: #1a1a1a !default;
-$black:    #000 !default;
+$white:    #ffffff !default;
+$gray-100: #e2e2e2 !default;
+$gray-200: #c6c6c6 !default;
+$gray-300: #ababab !default;
+$gray-400: #919191 !default;
+$gray-500: #777777 !default;
+$gray-600: #5e5e5e !default;
+$gray-700: #474747 !default;
+$gray-800: #303030 !default;
+$gray-900: #1b1b1b !default;
+$black:    #000000 !default;
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #d9534f !default;
-$orange:  #fd7e14 !default;
-$yellow:  #f0ad4e !default;
-$green:   #4BBF73 !default;
-$teal:    #20c997 !default;
-$cyan:    #1F9BCF !default;
+$blue:    #4939e0 !default;
+$indigo:  #002cbf !default;
+$purple:  #a235ff !default;
+$pink:    #ff69ea !default;
+$red:     #e03d39 !default;
+$orange:  #d83d00 !default;
+$yellow:  #e0c839 !default;
+$green:   #39e05e !default;
+$teal:    #5ccaca !default;
+$cyan:    #008d8f !default;
 
-$primary:       $gray-900 !default;
-$secondary:     $white !default;
+$primary:       $gray-100 !default;
+$secondary:     $black !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          $blue !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white !default;
@@ -41,7 +41,8 @@ $yiq-contrasted-threshold:  185 !default;
 
 // Body
 
-$body-color:                $gray-600 !default;
+$body-color:                $gray-100 !default;
+$body-color-bright:         $gray-900 !default;
 
 // Components
 
@@ -51,7 +52,7 @@ $border-radius-sm:            0 !default;
 
 // Fonts
 
-$font-family-sans-serif:      "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $font-size-base:              0.875rem !default;
 
@@ -62,8 +63,8 @@ $h4-font-size:                1.25rem !default;
 $h5-font-size:                1rem !default;
 $h6-font-size:                0.75rem !default;
 
-$headings-font-weight:        600 !default;
-$headings-color:              $gray-900 !default;
+$headings-font-weight:        100 !default;
+$headings-color:              $gray-100 !default;
 
 // Tables
 
@@ -75,22 +76,22 @@ $input-btn-border-width:      0 !default;
 
 // Buttons
 
-$btn-line-height:             1.5rem !default;
+$btn-line-height:             1rem !default;
 
-$input-btn-padding-y:         0.75rem !default;
-$input-btn-padding-x:         2rem !default;
+$input-btn-padding-y:         0.35rem !default;
+$input-btn-padding-x:         1rem !default;
 
-$input-btn-padding-y-sm:      .5rem !default;
-$input-btn-padding-x-sm:      1rem !default;
+$input-btn-padding-y-sm:      0.25rem !default;
+$input-btn-padding-x-sm:      0.5rem !default;
 
-$input-btn-padding-y-lg:      2rem !default;
-$input-btn-padding-x-lg:      3rem !default;
+$input-btn-padding-y-lg:      1rem !default;
+$input-btn-padding-x-lg:      1.5rem !default;
 
-$btn-font-weight:             600 !default;
+$btn-font-weight:             300 !default;
 
 // Forms
 
-$input-line-height:                     1.5rem !default;
+$input-line-height:                     1rem !default;
 
 $input-bg:                              $gray-200 !default;
 $input-disabled-bg:                     $gray-300 !default;
@@ -99,13 +100,13 @@ $input-group-addon-bg:                  $gray-300 !default;
 
 // Navbar
 
-$navbar-padding-y:                  1.5rem !default;
+$navbar-padding-y:                  0.5rem !default;
 
-$navbar-dark-hover-color:           $white !default;
+$navbar-dark-hover-color:           $black !default;
 
 $navbar-light-color:                rgba($black,.3) !default;
-$navbar-light-hover-color:          $gray-900 !default;
-$navbar-light-active-color:         $gray-900 !default;
+$navbar-light-hover-color:          $gray-800 !default;
+$navbar-light-active-color:         $gray-800 !default;
 
 // Pagination
 
