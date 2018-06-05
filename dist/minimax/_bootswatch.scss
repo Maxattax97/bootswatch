@@ -4,7 +4,7 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,latin-ext" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
@@ -37,11 +37,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,30
   &.navbar-bottom-top {
     border-width: 1px 0 0 0;
   }
+
+  &.nav-link:hover {
+      color: $white;
+  }
 }
+
+.bg-prim
 
 .bg-light {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: $primary;
+  color: $secondary;
 
   &.navbar-fixed-top {
     border-width: 0 0 1px 0;
@@ -50,6 +56,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,30
   &.navbar-bottom-top {
     border-width: 1px 0 0 0;
   }
+}
+
+.navbar-dark .nav-link:hover {
+    color: $white !important;
+}
+
+.bg-success {
+    color: $secondary;
 }
 
 .nav-item {
@@ -104,7 +118,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,30
 // Typography ==================================================================
 
 body {
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
   background-color: $gray-900;
 }
@@ -118,6 +132,41 @@ h1, h2, h3, h4, h5, h6 {
   color: $body-color !important;
 }
 
+
+@keyframes shrink {
+     0% { font-weight: 900; }
+    10% { font-weight: 900; }
+    20% { font-weight: 800; }
+    30% { font-weight: 700; }
+    40% { font-weight: 600; }
+    50% { font-weight: 500; }
+    60% { font-weight: 400; }
+    70% { font-weight: 300; }
+    80% { font-weight: 200; }
+    90% { font-weight: 100; }
+   100% { font-weight: 100; }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+        font-weight: 100;
+        animation-name: shrink;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+}
+
+p a {
+    text-decoration: $gray-500 underline;
+
+    &:hover {
+        text-decoration: $gray-500 underline;
+    }
+}
+
+
 // Tables ======================================================================
 
 th {
@@ -129,6 +178,148 @@ th {
   th, td {
     padding: 0.75rem;
   }
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: rgba($primary, $table-no-hover-opacity);
+  color: $secondary;
+}
+
+.table-hover .table-primary:hover {
+  background-color: rgba($primary, $table-hover-opacity);
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: rgba($primary, $table-hover-opacity);
+}
+
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td {
+  background-color: rgba($secondary, $table-no-hover-opacity);
+}
+
+.table-hover .table-secondary:hover {
+  background-color: rgba($secondary, $table-hover-opacity);
+}
+
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: rgba($secondary, $table-hover-opacity);
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: rgba($success, $table-no-hover-opacity);
+}
+
+.table-hover .table-success:hover {
+  background-color: rgba($success, $table-hover-opacity);
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: rgba($success, $table-hover-opacity);
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: rgba($info, $table-no-hover-opacity);
+}
+
+.table-hover .table-info:hover {
+  background-color: rgba($info, $table-hover-opacity);
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: rgba($info, $table-hover-opacity);
+}
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: rgba($warning, $table-no-hover-opacity);
+}
+
+.table-hover .table-warning:hover {
+  background-color: rgba($warning, $table-hover-opacity);
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: rgba($warning, $table-hover-opacity);
+}
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: rgba($danger, $table-no-hover-opacity);
+}
+
+.table-hover .table-danger:hover {
+  background-color: rgba($danger, $table-hover-opacity);
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: rgba($danger, $table-hover-opacity);
+}
+
+.table-light,
+.table-light > th,
+.table-light > td {
+  background-color: rgba($white, $table-no-hover-opacity);
+  color: $body-color-bright;
+}
+
+.table-hover .table-light:hover {
+  background-color: rgba($white, $table-hover-opacity);
+  color: $body-color-bright;
+}
+
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: rgba($white, $table-hover-opacity);
+  color: $body-color-bright;
+}
+
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: rgba($gray-700, $table-no-hover-opacity);
+}
+
+.table-hover .table-dark:hover {
+  background-color: rgba($gray-700, $table-hover-opacity);
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: rgba($gray-700, $table-hover-opacity);
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: $white;
+  color: $black;
+}
+
+.table-hover .table-active:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: $black;
+  color: $white;
 }
 
 // Forms =======================================================================
@@ -176,6 +367,10 @@ th {
   }
 }
 
+.form-control, .custom-select, .custom-file-label {
+    background: $gray-100;
+}
+
 // Navs ========================================================================
 
 .dropdown-menu {
@@ -196,6 +391,14 @@ th {
 }
 
 // Indicators ==================================================================
+
+.popover, .popover-header, .popover-body {
+    color: $body-color-bright;
+}
+
+.popover-body {
+    font-weight: 200;
+}
 
 // Progress bars ===============================================================
 
@@ -227,16 +430,17 @@ th {
   .h1, .h2, .h3, .h4, .h5, .h6 {
     color: inherit;
   }
+
+    background-color: $primary;
+    color: $gray-900;
 }
 
-.list-group-item-action {
+.list-group-item-action.active {
     background-color: $gray-700;
-        color: $gray-100;
+    color: $gray-100;
 }
 
-.list-group-item {
-    color: $gray-600;
-}
+
 
 .card {
 
@@ -244,6 +448,15 @@ th {
   &-header {
     color: inherit;
   }
+  color: $gray-500;
+}
+
+.card-link {
+    color: $gray-500;
+}
+
+.modal, .modal-title {
+    color: $body-color-bright;
 }
 
 .jumbotron {
@@ -253,37 +466,73 @@ th {
 // Alerts ======================================================================
 
 .alert {
-    color: $black;
+    color: $body-color-bright;
 }
 
 .alert-info {
     background-color: #ada8e0;
 }
 .alert-info .alert-link {
-    color: $black;
+    color: $body-color-bright;
 }
 
 .alert-success {
     background-color: #a8e0b4;
 }
 .alert-success .alert-link {
-    color: $black;
+    color: $body-color-bright;
 }
 
 .alert-warning {
     background-color: #e0d8a8;
 }
 .alert-warning .alert-link {
-    color: $black;
+    color: $body-color-bright;
 }
 
 .alert-danger {
     background-color: #e0a9a8;
 }
 .alert-danger .alert-link {
-    color: $black;
+    color: $body-color-bright;
 }
 
+.alert-primary .alert-link, .alert-secondary .alert-link, .alert-light .alert-link {
+    color: $body-color-bright;
+}
 
+.border-primary {
+  border-width: 3px;
+}
 
+.border-secondary {
+  border-width: 3px;
+}
 
+.border-success {
+  border-width: 3px;
+}
+
+.border-info {
+  border-width: 3px;
+}
+
+.border-warning {
+  border-width: 3px;
+}
+
+.border-danger {
+  border-width: 3px;
+}
+
+.border-light {
+  border-width: 3px;
+}
+
+.border-dark {
+  border-width: 3px;
+}
+
+.border-white {
+  border-width: 3px;
+}

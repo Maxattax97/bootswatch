@@ -28,7 +28,7 @@ $green:   #39e05e !default;
 $teal:    #5ccaca !default;
 $cyan:    #008d8f !default;
 
-$primary:       $gray-100 !default;
+$primary:       $white !default;
 $secondary:     $black !default;
 $success:       $green !default;
 $info:          $blue !default;
@@ -54,7 +54,7 @@ $border-radius-sm:            0 !default;
 
 $font-family-sans-serif:      "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$font-size-base:              0.875rem !default;
+$font-size-base:              1rem !default;
 
 $h1-font-size:                2rem !default;
 $h2-font-size:                1.75rem !default;
@@ -69,6 +69,8 @@ $headings-color:              $gray-100 !default;
 // Tables
 
 $table-border-color:          rgba(0, 0, 0, 0.05) !default;
+$table-no-hover-opacity:      0.3;
+$table-hover-opacity:         0.6;
 
 // Buttons + Forms
 
